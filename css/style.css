@@ -15,29 +15,6 @@ body {
   font-family: var(--primary-font);
 }
 
-.faq-card__header {
-  margin-bottom: 2rem;
-}
-
-.faq__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.faq-arrow {
-  order: 1;
-  width: 15px;
-  height: 12px;
-}
-
-.open {
-  transform: rotate(180deg);
-}
-
-.faq--answer {
-  display: none;
-}
-
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
@@ -48,6 +25,38 @@ body {
   overflow: hidden;
   padding: 0;
   position: absolute;  
+}
+
+.faq-card__header {
+  margin-bottom: 2rem;
+}
+
+.faq__wrapper {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-arrow {
+  order: 1;
+  width: 15px;
+  height: 12px;
+}
+
+.faq--answer {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.active {
+  font-weight: 700;
+}
+
+.show {
+  display: block
 }
 
 .fm-attribution-row {
