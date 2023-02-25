@@ -1,0 +1,64 @@
+:root {
+  --dark-desat-blue: hsl(238, 29%, 16%);
+  --dark-gray-blue: hsl(240, 6%, 50%);
+  --darker-gray-blue: hsl(237, 12%, 33%);
+  --light-gray-blue: hsl(240, 5%, 91%);
+  --light-blue: hsl(240, 73%, 65%);
+  --light-red: hsl(14, 88%, 65%);
+  --light-violet: hsl(273, 75%, 66%);
+  --primary-font: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: var(--primary-font);
+}
+
+.faq-card__header {
+  margin-bottom: 2rem;
+}
+
+.faq__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-arrow {
+  order: 1;
+  width: 15px;
+  height: 12px;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+.faq--answer {
+  display: none;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;  
+}
+
+.fm-attribution-row {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.fm-attribution {
+  font-size: .75rem;
+}
+
+.fm-attribution a {
+  color: hsl(228, 45%, 44%);
+}
