@@ -14,11 +14,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: var(--primary-font);
+  font-size: .9rem;
   color: var(--darker-gray-blue);
   display: grid;
   grid-template-rows: 1fr auto;
-  /* background-image: url(../assets/images/bg-pattern-mobile.svg); */
-  /* background-repeat: no-repeat; */
   background-image: linear-gradient(var(--light-violet), var(--light-blue));
 
 }
@@ -39,6 +38,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .container {
@@ -50,26 +51,29 @@ main {
   width: 100%;
   background-color: var(--white);
   border-radius: 1.5rem;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 3rem;
   margin-top: 250px;
 }
 
-@media (min-width: 900px){
+@media (min-width: 1200px){
   .container {
-    max-width: 900px;
+    max-width: 1000px;
     flex-direction: row;
+    padding-top: 4.5rem;
+    padding-right: 6rem;
+    margin-top: 100px;
+    gap: 1rem;
+    overflow: hidden;
+  }
+
+  .col {
+    flex: 1;
   }
 }
 
-/* .col {
-  flex: 1;
-} */
-
 .col__left {
-  position: relative;
-  background-image: url('../assets/images/illustration-woman-online-mobile.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -78,7 +82,7 @@ main {
   bottom: 145px;
 }
 
-.col__left-bground {
+.col__left--bground-pattern {
   position: absolute;
   top: 90px;
   left: 0;
@@ -88,18 +92,65 @@ main {
   background-position: center;
   background-size: contain;
   height: 100%;
+}
 
+@media (min-width: 1200px){
+  .col__left {
+    position: relative;
+    bottom: 0;
+    left: -70px;
+    height: 450px;
+  }
+
+  .col__left img {
+    position: relative;
+    left: -10px;
+    top: 40px;
+    z-index: 1;
+  }
+
+  .col__left--bground-pattern {
+    background-image: url('../assets/images/bg-pattern-desktop.svg');
+    top: -350px;
+    left: -425px;
+    min-height: 1000px;
+  }
+
+  .col__left--desktop-shape {
+    background-image: url('../assets/images/illustration-box-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    z-index: 1;
+  }
 }
 
 .col__right {
-  margin-top: -75px;
+  margin-top: -85px;
+}
+
+@media (min-width: 1200px){
+  .col__right {
+    margin-top: 0;
+  }
 }
 
 .faq-card__header {
   font-size: 2.5rem;
   text-align: center;
   color: var(--dark-desat-blue);
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1200px){
+  .faq-card__header {
+    text-align: left;
+  }
 }
 
 .faq__wrapper {
@@ -107,6 +158,10 @@ main {
   justify-content: space-between;
   align-items: baseline;
   cursor: pointer;
+}
+
+.faq__wrapper:hover {
+  color: var(--light-red);
 }
 
 .faq-arrow__wrapper {
@@ -127,7 +182,6 @@ main {
 
 .faq--answer {
   color: var(--dark-gray-blue);
-  font-size: .925rem;
   line-height: 1.5;
   margin-top: .75rem;
   display: none;
