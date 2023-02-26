@@ -53,7 +53,7 @@ main {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
   padding-bottom: 3rem;
-  margin-top: 35%;
+  margin-top: 250px;
 }
 
 @media (min-width: 900px){
@@ -159,8 +159,11 @@ hr.divider {
 
 .fm-attribution {
   font-size: .75rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
+.fm-attribution,
 .fm-attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--white);
 }
