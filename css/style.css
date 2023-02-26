@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: var(--primary-font);
+  color: var(--darker-gray-blue);
   display: grid;
   grid-template-rows: 1fr auto;
   /* background-image: url(../assets/images/bg-pattern-mobile.svg); */
@@ -48,7 +49,7 @@ main {
   max-width: 400px;
   width: 100%;
   background-color: var(--white);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding-left: 1.75rem;
   padding-right: 1.75rem;
   padding-bottom: 3rem;
@@ -68,48 +69,72 @@ main {
 
 .col__left {
   position: relative;
-  bottom: 150px;
-  height: 150px;
-  /* background: aqua; */
+  background-image: url('../assets/images/illustration-woman-online-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 250px;
+  bottom: 145px;
 }
 
-.col__left img {
-  width: 350px;
-  margin: 0 auto;
+.col__left-bground {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background-image: url('../assets/images/bg-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+
+}
+
+.col__right {
+  margin-top: -75px;
 }
 
 .faq-card__header {
   font-size: 2.5rem;
   text-align: center;
   color: var(--dark-desat-blue);
-  margin-bottom: 2rem;
+  margin-bottom: 2.75rem;
 }
 
 .faq__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   cursor: pointer;
 }
 
-.faq-arrow {
+.faq-arrow__wrapper {
   order: 1;
+  flex-basis: 10%;
+  display: flex;
+  justify-content: end;
+}
+
+.faq-arrow {
   width: 15px;
   height: 10px;
 }
 
 .faq {
-  padding: 1rem 0;
+  flex-basis: 90%;
 }
 
 .faq--answer {
   color: var(--dark-gray-blue);
+  font-size: .925rem;
+  line-height: 1.5;
   margin-top: .75rem;
   display: none;
 }
 
 hr.divider {
-  margin: .75rem 0;
+  margin: 1.75rem 0;
   border: 1px solid var(--light-gray-blue);
 }
 
@@ -118,6 +143,7 @@ hr.divider {
 }
 
 .active {
+  color: var(--dark-desat-blue);
   font-weight: 700;
 }
 
@@ -126,7 +152,8 @@ hr.divider {
 }
 
 .fm-attribution-row {
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 4rem;
   padding-bottom: 2rem;
 }
 
