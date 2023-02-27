@@ -41,6 +41,7 @@ main {
   padding-right: 1rem;
 }
 
+/* Setting outer container to anchor the graphical cube */
 .outer-container {
   max-width: 400px;
   width: 100%;
@@ -103,8 +104,28 @@ main {
   bottom: 145px;
 }
 
+@media (min-width: 1200px){
+  .col__left {
+    position: relative;
+    background: none;
+    bottom: 0;
+    left: -70px;
+    height: 450px;
+  }
+}
+
 .col__left img {
   display: none;
+}
+
+@media (min-width: 1200px){
+  .col__left img {
+    display: block;
+    position: relative;
+    left: -30px;
+    top: 40px;
+    z-index: 1;
+  }
 }
 
 .col__left--bground-pattern {
@@ -120,22 +141,6 @@ main {
 }
 
 @media (min-width: 1200px){
-  .col__left {
-    position: relative;
-    background: none;
-    bottom: 0;
-    left: -70px;
-    height: 450px;
-  }
-
-  .col__left img {
-    display: block;
-    position: relative;
-    left: -30px;
-    top: 40px;
-    z-index: 1;
-  }
-
   .col__left--bground-pattern {
     background-image: url('../assets/images/bg-pattern-desktop.svg');
     top: -350px;
